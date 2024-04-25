@@ -17,8 +17,6 @@ data = {
 def get_query_string():
     #Decoding the 'question' parameter from the request URL to handle special characters properly
     question = urllib.parse.unquote(request.args.get('question'))
-    print("Question is:",question)
-
     response = data.get(question.strip())
 
     #If statement that will return response based on whether question is recognized or not and returned in JSON format
